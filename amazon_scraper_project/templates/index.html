@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon Product Scraper</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Amazon Product Scraper</h1>
+    <div class="form-group">
+        <label for="amazon-url">Amazon Product URL:</label>
+        <input type="text" id="amazon-url" placeholder="Enter Amazon product URL">
+    </div>
+    <div class="form-group">
+        <button onclick="scrapeAmazonData(event)">Search</button>
+    </div>
+    <div class="result" id="result"></div>
+    <div class="loader" id="loader"></div> <!-- Loading animation -->
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
